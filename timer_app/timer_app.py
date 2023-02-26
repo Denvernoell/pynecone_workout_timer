@@ -95,7 +95,8 @@ class State(pc.State):
         self.sound = 'controls autoplay loop'
         
 
-def workout():
+# def workout():
+def index():
     return pc.center(
         pc.vstack(
             pc.heading("Workout Timer", font_size="2em"),
@@ -188,26 +189,26 @@ def workout():
     
 
 
-def index():
-    return pc.center(
-        pc.vstack(
-            pc.heading("Welcome to Pynecone!", font_size="2em"),
-            pc.box("Get started by editing ", pc.code(filename, font_size="1em")),
-            pc.link(
-                "Check out our docs!",
-                href=docs_url,
-                border="0.1em solid",
-                padding="0.5em",
-                border_radius="0.5em",
-                _hover={
-                    "color": "rgb(107,99,246)",
-                },
-            ),
-            spacing="1.5em",
-            font_size="2em",
-        ),
-        padding_top="10%",
-    )
+# def index():
+#     return pc.center(
+#         pc.vstack(
+#             pc.heading("Welcome to Pynecone!", font_size="2em"),
+#             pc.box("Get started by editing ", pc.code(filename, font_size="1em")),
+#             pc.link(
+#                 "Check out our docs!",
+#                 href=docs_url,
+#                 border="0.1em solid",
+#                 padding="0.5em",
+#                 border_radius="0.5em",
+#                 _hover={
+#                     "color": "rgb(107,99,246)",
+#                 },
+#             ),
+#             spacing="1.5em",
+#             font_size="2em",
+#         ),
+#         padding_top="10%",
+#     )
 
 
 
@@ -216,5 +217,5 @@ def index():
 # Add state and page to the app.
 app = pc.App(state=State)
 app.add_page(index)
-app.add_page(workout)
+# app.add_page(workout)
 app.compile()
